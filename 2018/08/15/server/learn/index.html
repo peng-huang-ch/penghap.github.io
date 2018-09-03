@@ -79,13 +79,13 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="跬步">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T14:29:08.503Z">
+<meta property="og:updated_time" content="2018-09-03T14:29:08.427Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="about">
 
 
 
@@ -113,7 +113,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/about/"/>
 
 
 
@@ -1144,6 +1144,73 @@
 <h4 id="分层架构"><a href="#分层架构" class="headerlink" title="分层架构"></a>分层架构</h4><h5 id="C-S-架构、B-S-架构"><a href="#C-S-架构、B-S-架构" class="headerlink" title="C/S 架构、B/S 架构"></a>C/S 架构、B/S 架构</h5><p>  划分对象是整个业务系统，划分维度是用户交互，即将用户交互部分独立成一层，支撑用户交互的后台作为另外一层</p>
 <h5 id="MVC架构、MVP架构"><a href="#MVC架构、MVP架构" class="headerlink" title="MVC架构、MVP架构"></a>MVC架构、MVP架构</h5><p>  划分对象时单个业务子系统，划分维度是职责，将不同的职责划分到独立层，但各层的依赖关系比较灵活</p>
 <h5 id="逻辑分层架构"><a href="#逻辑分层架构" class="headerlink" title="逻辑分层架构"></a>逻辑分层架构</h5><p>  核心之一：需要保证各层之间的差异足够清晰，边界足够明显，让人看到架构图后就能看懂整个架构<br>  划分对象可以是单个业务子系统，也可以是整个业务系统，划分维度是职责</p>
+<p>  隔离关注点<br>  分层时要保证层与层之间的依赖是稳定的，才能真正支撑快速扩展<br>  另一特点：层层传递</p>
+<h5 id="SOA-Service-Oriented-Architecture）-面向服务架构"><a href="#SOA-Service-Oriented-Architecture）-面向服务架构" class="headerlink" title="SOA (Service Oriented Architecture） 面向服务架构"></a>SOA (Service Oriented Architecture） 面向服务架构</h5><p>解决重复建设和扩展效率低</p>
+<ul>
+<li>服务</li>
+<li>ESB (Enterprise Service Bus) 企业服务总线</li>
+<li>松耦合</li>
+</ul>
+<h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><h4 id="服务粒度"><a href="#服务粒度" class="headerlink" title="服务粒度"></a>服务粒度</h4><p>  SOA 服务粒度粗点，微服务 粒度要低点</p>
+<h4 id="服务通信"><a href="#服务通信" class="headerlink" title="服务通信"></a>服务通信</h4><p>  SOA 采用ESB作为服务间的关键组件，负责服务定义、服务路由、消息转换、消息传递，总体上是重量级的实现</p>
+<p>  微服务推荐使用统一的协议和格式</p>
+<h4 id="服务交付"><a href="#服务交付" class="headerlink" title="服务交付"></a>服务交付</h4><p>  SOA 对服务交付并没有特殊要求<br>  要求快速交付，相应地要求采取自动化测试、持续集成、自动化部署等敏捷开发相关的最佳实践</p>
+<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p>  SOA 更加适合庞大、复杂、异构的企业级系统<br>  快速、轻量级、基于web的互联网系统，这类系统业务变换快，需要快速尝试、快速交付</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">对比维度</th>
+<th style="text-align:center">SOA</th>
+<th style="text-align:center">微服务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">服务粒度</td>
+<td style="text-align:center">粗</td>
+<td style="text-align:center">细</td>
+</tr>
+<tr>
+<td style="text-align:center">服务通信</td>
+<td style="text-align:center">重量级，ESB</td>
+<td style="text-align:center">轻量级，HTTP或REST</td>
+</tr>
+<tr>
+<td style="text-align:center">服务交付</td>
+<td style="text-align:center">慢</td>
+<td style="text-align:center">快</td>
+</tr>
+<tr>
+<td style="text-align:center">应用场景</td>
+<td style="text-align:center">企业级</td>
+<td style="text-align:center">互联网</td>
+</tr>
+</tbody>
+</table>
+<h4 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h4><ul>
+<li>服务划分过细，服务间关系复杂</li>
+<li>服务数量太多，团队效率急剧下降</li>
+<li>调用链太长，性能下降</li>
+<li>调用链太长，问题定位困难</li>
+<li>没有自动化支撑，无法快速交付</li>
+<li>没有服务治理，微服务数量多了后管理混乱</li>
+</ul>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>  陷阱</p>
+<ul>
+<li>微服务拆分过细，过分强调“small”。 </li>
+<li>微服务基础设施不健全，忽略了“automated”。</li>
+<li>微服务并不轻量级，规模大了后，“lightweight”不再适应。</li>
+</ul>
+<h5 id="服务粒度-1"><a href="#服务粒度-1" class="headerlink" title="服务粒度"></a>服务粒度</h5><p>  三个火枪手</p>
+<h5 id="拆分方法"><a href="#拆分方法" class="headerlink" title="拆分方法"></a>拆分方法</h5><ul>
+<li>基于业务逻辑拆分</li>
+<li>基于可扩展拆分<ul>
+<li>稳定服务</li>
+<li>变动服务</li>
+</ul>
+</li>
+<li>基于可靠性拆分</li>
+</ul>
 
       
     </div>
@@ -1315,7 +1382,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#架构设计的目的"><span class="nav-text">架构设计的目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度"><span class="nav-text">复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细设计原则"><span class="nav-text">详细设计原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高性能数据库集群"><span class="nav-text">高性能数据库集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nosql"><span class="nav-text">Nosql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存架构"><span class="nav-text">缓存架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PPC与TPC"><span class="nav-text">PPC与TPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reactor和Proactor"><span class="nav-text">Reactor和Proactor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡算法"><span class="nav-text">负载均衡算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAP"><span class="nav-text">CAP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双机架构"><span class="nav-text">双机架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主备复制"><span class="nav-text">主备复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主从复制"><span class="nav-text">主从复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双机切换"><span class="nav-text">双机切换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主主复制"><span class="nav-text">主主复制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群和分区"><span class="nav-text">集群和分区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集群"><span class="nav-text">数据集群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据分区"><span class="nav-text">数据分区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计计算高可用架构"><span class="nav-text">设计计算高可用架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主备"><span class="nav-text">主备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主从"><span class="nav-text">主从</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集群"><span class="nav-text">集群</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异地多活"><span class="nav-text">异地多活</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准"><span class="nav-text">标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#架构模式"><span class="nav-text">架构模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技巧"><span class="nav-text">技巧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤"><span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口级故障"><span class="nav-text">接口级故障</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原因"><span class="nav-text">原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#降级"><span class="nav-text">降级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#熔断"><span class="nav-text">熔断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#限流"><span class="nav-text">限流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排队"><span class="nav-text">排队</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可扩展架构"><span class="nav-text">可扩展架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拆分思路"><span class="nav-text">拆分思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分层架构"><span class="nav-text">分层架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#C-S-架构、B-S-架构"><span class="nav-text">C/S 架构、B/S 架构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MVC架构、MVP架构"><span class="nav-text">MVC架构、MVP架构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逻辑分层架构"><span class="nav-text">逻辑分层架构</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#架构设计的目的"><span class="nav-text">架构设计的目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度"><span class="nav-text">复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细设计原则"><span class="nav-text">详细设计原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高性能数据库集群"><span class="nav-text">高性能数据库集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nosql"><span class="nav-text">Nosql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存架构"><span class="nav-text">缓存架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PPC与TPC"><span class="nav-text">PPC与TPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reactor和Proactor"><span class="nav-text">Reactor和Proactor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡算法"><span class="nav-text">负载均衡算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAP"><span class="nav-text">CAP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双机架构"><span class="nav-text">双机架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主备复制"><span class="nav-text">主备复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主从复制"><span class="nav-text">主从复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双机切换"><span class="nav-text">双机切换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主主复制"><span class="nav-text">主主复制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群和分区"><span class="nav-text">集群和分区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集群"><span class="nav-text">数据集群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据分区"><span class="nav-text">数据分区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计计算高可用架构"><span class="nav-text">设计计算高可用架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主备"><span class="nav-text">主备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主从"><span class="nav-text">主从</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集群"><span class="nav-text">集群</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异地多活"><span class="nav-text">异地多活</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准"><span class="nav-text">标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#架构模式"><span class="nav-text">架构模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技巧"><span class="nav-text">技巧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤"><span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口级故障"><span class="nav-text">接口级故障</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原因"><span class="nav-text">原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#降级"><span class="nav-text">降级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#熔断"><span class="nav-text">熔断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#限流"><span class="nav-text">限流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排队"><span class="nav-text">排队</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可扩展架构"><span class="nav-text">可扩展架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拆分思路"><span class="nav-text">拆分思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分层架构"><span class="nav-text">分层架构</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#C-S-架构、B-S-架构"><span class="nav-text">C/S 架构、B/S 架构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MVC架构、MVP架构"><span class="nav-text">MVC架构、MVP架构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#逻辑分层架构"><span class="nav-text">逻辑分层架构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SOA-Service-Oriented-Architecture）-面向服务架构"><span class="nav-text">SOA (Service Oriented Architecture） 面向服务架构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微服务"><span class="nav-text">微服务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#服务粒度"><span class="nav-text">服务粒度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#服务通信"><span class="nav-text">服务通信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#服务交付"><span class="nav-text">服务交付</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用场景"><span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#坑"><span class="nav-text">坑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法"><span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#服务粒度-1"><span class="nav-text">服务粒度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#拆分方法"><span class="nav-text">拆分方法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
