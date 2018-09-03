@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:site_name" content="跬步">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-02T14:07:02.965Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.1',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/about/"/>
+
+
+
+
+
+  <title>从0开始学架构【笔记】 | 跬步</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">跬步</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">至千里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/15/server/learn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="侬你个啥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/setting/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="跬步">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">从0开始学架构【笔记】</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-15T00:00:00+08:00">2018-08-15</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://time.geekbang.org/column/81" target="_blank" rel="noopener">从0开始学架构–李运华</a></p>
+<ul>
+<li>软件架构需要根据业务发展不断变化</li>
+<li>机器语言：三难 难读、难写、难改</li>
+<li>汇编语言：还是难写</li>
+<li><p>高级语言：不关注低级结构和逻辑</p>
+</li>
+<li><p>结构化编程</p>
+<ul>
+<li>第一次软件危机（逻辑难拓展）</li>
+<li>《人月神话》</li>
+<li>结构化程序设计</li>
+<li>模块</li>
+<li>非goto “自顶向下、逐步细化、模块化”</li>
+</ul>
+</li>
+<li><p>面向对象编程</p>
+<ul>
+<li>第二次软件危机（结构难拓展）</li>
+<li>面向对象设计 / C++</li>
+</ul>
+</li>
+<li><p>软件架构</p>
+<ul>
+<li>系统规模的增加，算法、数据结构不再是主要的问题 </li>
+<li>系统规模庞大，内部耦合严重，开发效率低</li>
+<li>系统耦合严重，牵一发动全身，后续修改和扩展困难</li>
+<li>系统逻辑复杂，容易出问题，出问题后很难排查和修复</li>
+</ul>
+</li>
+<li><p>软件开发过程包括了分析、设计、实现、测试、验证、部署、运维等多个环节。从IT技术的发展历程来看，先辈们在上述不同的环节中提出过很多在当时看来很先进的方法与理念。但是，这些方法、理念在摩尔定律、业务创新、技术发展面前都被一一验证了以下观点：我们可以通过诸多方式去接近“银弹”，但很遗憾，软件活动中没有“银弹”</p>
+</li>
+</ul>
+<h3 id="架构设计的目的"><a href="#架构设计的目的" class="headerlink" title="架构设计的目的"></a>架构设计的目的</h3><ul>
+<li>解决软件系统复杂度带来的问题</li>
+<li><p>问题的解决</p>
+<ul>
+<li>下手<ul>
+<li>通过熟悉和理解需求，识别系统复杂性所在的地方</li>
+</ul>
+</li>
+<li>时间不够<ul>
+<li>并不需要面面俱到、也不需要都具备都聚备高性能、高可用、高拓展等特点，而是要识别出复杂点然后针对性的解决问题</li>
+</ul>
+</li>
+<li><p>参考选择</p>
+<ul>
+<li>理解每个架构方案背后所需要解决的复杂点，然后才能对比自己的业务复杂点，参考复杂点相似的方案。</li>
+</ul>
+</li>
+<li><p>需求驱动开发，需求驱动架构</p>
+</li>
+<li>解决软件系统复杂度带来的问题而提出的一种解决方案，方案需要综合各种因素（时间、人力、财务等）</li>
+</ul>
+</li>
+</ul>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><ul>
+<li><p>高性能</p>
+<ul>
+<li>进程：操作系统来进行资源分配和调度最小单元</li>
+<li>线程：程序执行流的最小单元</li>
+<li>单机复杂度</li>
+<li>集群复杂度<ul>
+<li>任务分配</li>
+<li>任务分解<ul>
+<li>简单的系统更易实现高性能</li>
+<li>针对特定的任务进行拓展</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>高可用</p>
+<ul>
+<li>计算高可用</li>
+<li>存储高可用<ul>
+<li>数据不一致对业务带来的影响</li>
+<li>CAP 一致性、可用性、分区容错性</li>
+</ul>
+</li>
+<li>高可用的状态决策<ul>
+<li>独裁式<ul>
+<li>决策者、决策者故障</li>
+</ul>
+</li>
+<li>协商式<ul>
+<li>主备方案</li>
+</ul>
+</li>
+<li>民主式<ul>
+<li>投票节点数必须超过系统总节点数一半</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>可扩展性</p>
+<ul>
+<li>为了应对将来的需求变化提供的拓展能力<ul>
+<li>预测变化</li>
+<li>封装变化</li>
+</ul>
+</li>
+<li>复杂性<ul>
+<li>不能每个设计点都考虑可扩展性</li>
+<li>不能完全不考虑可扩展性</li>
+<li>所有的预测都存在出错的可能性</li>
+</ul>
+</li>
+<li>变化层<ul>
+<li>将变化的部分封装成变化层</li>
+</ul>
+</li>
+<li>稳定层<ul>
+<li>将不变的部分封装成稳定层</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>复杂度</p>
+<ul>
+<li>成本、安全、规模</li>
+<li>低成本<ul>
+<li>创新</li>
+</ul>
+</li>
+<li>安全<ul>
+<li>功能安全 （防小偷）</li>
+<li>架构安全 （防强盗）<ul>
+<li>运营商、云服务商强大的带宽和流量清洗</li>
+</ul>
+</li>
+<li>规模<ul>
+<li>量变引起质变</li>
+<li>功能越来越多，导致系统复杂度指数级上升</li>
+<li>数据越来越多，系统复杂度发生质变</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>大数据理论<ul>
+<li>Google File System 是大数据文件存储的技术理论</li>
+<li>Google MapReduce 是大数据运算的技术理论</li>
+<li>Google Bigtable 是列式数据存储的技术理论</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>架构设计三原则</p>
+<ul>
+<li>合适原则<ul>
+<li>没有那么多人，却想干那么多活</li>
+<li>没有那么多积累，去想一步登天</li>
+<li>没有卓越的业务场景，却幻想灵光一现</li>
+</ul>
+</li>
+<li>简单原则<ul>
+<li>简单优于复杂</li>
+<li>复杂性<ul>
+<li>结构的复杂性<ul>
+<li>组件越多，越有可能组件故障</li>
+<li>组件改动，影响关联的组件</li>
+<li>定位一个复杂系统中的问题总是比简单系统更加困难</li>
+<li>KISS（keep it simple, stupid）</li>
+</ul>
+</li>
+<li>逻辑的复杂性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>演化原则<ul>
+<li>演化优于一步到位</li>
+<li>软件架构需要根据业务发展不断变化</li>
+<li>设计出来的架构要满足当时的业务需要</li>
+<li>架构要不断地在实际应用过程中迭代，保留优秀的设计，修复有缺陷的设计，改正错误的设计，去掉无用的设计，使得架构逐渐完善</li>
+<li>当业务发生变化时，架构要扩展、重构，甚至重写；代码也许会重写，但有价值的经验、教训、逻辑、设计等（类似生物体内的基因）却可以在新架构中延续</li>
+<li>贪大求全、盲目照搬大公司的做法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>识别复杂度</p>
+<ul>
+<li>将主要的复杂度问题列出来，然后根据业务、技术、团队等综合情况进行排序，优先解决当前面临的最主要的复杂度问题</li>
+<li>排查法</li>
+<li>Hadoop 能够将高可用、高性能、大容量三个大数据处理的复杂度问题同时解决</li>
+</ul>
+</li>
+<li><p>设计备选方案</p>
+<ul>
+<li>错误做法<ul>
+<li>做最优的方案</li>
+<li>只做一个方案</li>
+</ul>
+</li>
+<li>正确方案<ul>
+<li>3~5个方案</li>
+<li>备选方案差异明显</li>
+<li>不局于现有的方案</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>评估</p>
+</li>
+<li>质量属性</li>
+<li>复杂度</li>
+<li>硬件成本</li>
+<li>可运维性</li>
+<li>可靠性</li>
+<li>人力投入</li>
+</ul>
+<h3 id="详细设计原则"><a href="#详细设计原则" class="headerlink" title="详细设计原则"></a>详细设计原则</h3><ul>
+<li>Nginx 的负载均衡策略，备选有轮询、权重分配、ip_hash、fair、url_hash</li>
+<li>一个电商架构，由于和 session 比较强相关，因此如果用 Nginx 来做集群负载均衡，那么选择 ip_hash 策略是比较合适的</li>
+</ul>
+<h3 id="高性能数据库集群"><a href="#高性能数据库集群" class="headerlink" title="高性能数据库集群"></a>高性能数据库集群</h3><ul>
+<li><p>读写分离</p>
+<ul>
+<li>读写分离的基本原理是将数据库读写操作分散到不同的节点上</li>
+<li>基本实现<ul>
+<li>数据库服务器搭建主从集群，一主一从、一主多从都是可以</li>
+<li>数据库主机负责读写操作，从机只负责度操作</li>
+<li>数据库主机通过复制讲数据同步到从机，将读操作发给数据库从机</li>
+<li>业务服务器将写操作发给数据库主机，将读操作发给数据从机</li>
+</ul>
+</li>
+<li>注意点<ul>
+<li>主从复制延迟</li>
+<li>分配机制</li>
+</ul>
+</li>
+<li>复制延迟<ul>
+<li>写操作后的读操作指定发给数据库主服务器</li>
+<li>读从机失败后再读一次主机</li>
+<li>关键业务读写操作全部指向主机，非关键业务采用读写分离</li>
+</ul>
+</li>
+<li>分配机制<ul>
+<li>程序代码封装<ul>
+<li>实现简单，而且可以根据业务做较多定制化的功能</li>
+<li>每个编程语言都需要自己实现一次，无法通用，如果一个业务包含多个编程语言写的多个子系统，则重复开发的工作量比较大</li>
+<li>故障情况下，如果主从发生切换，则可能需要所有系统都修改配置并重启</li>
+</ul>
+</li>
+<li>中间件封装<ul>
+<li>能够支持多种编程语言，因为数据库中间件对业务服务器提供的是标准 SQL 接口</li>
+<li>实现比较复杂，细节特别多，很容易出现 bug，需要较长的时间才能稳定</li>
+<li>数据库中间件自己不执行真正的读写操作，但所有的数据库操作请求都要经过中间件，中间件的性能要求也很高</li>
+<li>数据库主从切换对业务服务器无感知，数据库中间件可以探测数据库服务器的主从状态</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分库分表</p>
+<ul>
+<li>分库<ul>
+<li>业务分库</li>
+<li>按照业务模块将数据分散到不同的数据库服务器中<ul>
+<li>问题</li>
+<li>join 操作问题</li>
+<li>事务问题</li>
+<li>成本问题</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分表<ul>
+<li>垂直分表<ul>
+<li>表操作数量要增加</li>
+</ul>
+</li>
+<li>水平分表<ul>
+<li>表行数特别大的那种（5000W参考）</li>
+<li>复杂性<ul>
+<li>路由<ul>
+<li>范围路由<ul>
+<li>分布不均</li>
+<li>表的拓展简单</li>
+</ul>
+</li>
+<li>Hash 路由<ul>
+<li>分布均匀</li>
+<li>表的拓展麻烦</li>
+</ul>
+</li>
+<li>配置路由<ul>
+<li>单独的路由表</li>
+<li>简单，灵活</li>
+<li>拓展放标</li>
+<li>多查一次，影响性能</li>
+<li>太大了，死循环</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>join, 多次join问题</li>
+<li>count问题<ul>
+<li>coun相加<ul>
+<li>实现简单，性能低<br>记录数表</li>
+<li>增加写压力</li>
+<li>后台更新</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实现方法<ul>
+<li>代码程封装</li>
+<li>中间件封装</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>优化顺序</p>
+<ul>
+<li>硬件优化</li>
+<li>数据库调优</li>
+<li>引入缓存</li>
+<li>程序与数据库的优化</li>
+<li>分库、分表</li>
+</ul>
+</li>
+<li><p>数据写双份，一份给线上用，采用分库分表；一份给运营，不分库分表</p>
+</li>
+</ul>
+<h3 id="Nosql"><a href="#Nosql" class="headerlink" title="Nosql"></a>Nosql</h3><ul>
+<li>关系数据库存储的是行记录，无法存储数据结构</li>
+<li>关系数据库的schema拓展很不方便</li>
+<li>关系数据库在大数据场景下I/O较高</li>
+<li>关系数据库的全文搜索功能比较弱</li>
+</ul>
+<p>解决</p>
+<ul>
+<li>K-V 存储：解决关系数据库无法存储数据结构的问题，以 Redis 为代表</li>
+<li>文档数据库：解决关系数据库强 schema 约束的问题，以 MongoDB 为代表</li>
+<li>列式数据库：解决关系数据库大数据场景下的 I/O 问题，以 HBase 为代表<ul>
+<li>一般将列式存储应用在离线的大数据分析和统计场景中</li>
+</ul>
+</li>
+<li>全文搜索引擎：解决关系数据库的全文搜索性能问题，以 Elasticsearch 为代表<ul>
+<li>全文搜索的条件可以随意排列组合，如果通过索引来满足，则索引的数量会非常多</li>
+<li>全文搜索的模糊匹配方式，索引无法满足，只能用 like 查询，而 like 查询是整表扫描，效率非常低<ul>
+<li>全文搜索引擎的技术原理被称为“倒排索引”（Inverted index），也常被称为反向索引、置入档案或反向档案，是一种索引方法，其基本原理是建立单词到文档的索引</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="缓存架构"><a href="#缓存架构" class="headerlink" title="缓存架构"></a>缓存架构</h3><ul>
+<li><p>缓存穿透</p>
+<ul>
+<li>缓存没有发挥作用，业务系统虽然去缓存查询数据，但缓存中没有数据，业务系统需要再次去存储系统查询数据</li>
+<li><ol>
+<li>存储数据不存在 – 双key</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>缓存数据生成耗费大量时间或者资源</li>
+</ol>
+<ul>
+<li>存储系统中存在数据，但生成缓存数据需要耗费较长时间或者耗费大量资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>缓存雪崩</p>
+<ul>
+<li>缓存雪崩是指当缓存失效（过期）后引起系统性能急剧下降的情况</li>
+<li>解决方法<ul>
+<li>更新锁<ul>
+<li>对缓存更新操作进行加锁保护，保证只有一个线程能够进行缓存更新，未能获取更新锁的线程要么等待锁释放后重新读取缓存，要么就返回空值或者默认值</li>
+<li>分布锁，如 ZooKeeper</li>
+</ul>
+</li>
+<li>后台更新<ul>
+<li>由后台线程来更新缓存，而不是由业务线程来更新缓存，缓存本身的有效期设置为永久，后台线程定时更新缓存</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>缓存热点</p>
+<ul>
+<li>缓存热点的解决方案就是复制多份缓存副本，将请求分散到多个缓存服务器上，减轻缓存热点导致的单台缓存服务器压力</li>
+</ul>
+</li>
+<li><p>双key机制<br>mysql缓存：</p>
+</li>
+<li><ol>
+<li>mysql第一种缓存叫sql语句结果缓存，但条件比较苛刻，程序员不可控，我们的dba线上都关闭这个功能，具体实现可以查一下 </li>
+</ol>
+</li>
+<li><ol start="2">
+<li>mysql第二种缓存是innodb buffer pool，缓存的是磁盘上的分页数据，不是sql的查询结果，sql的执行过程省不了。而mc，redis这些实际上都是缓存sql的结果，两种缓存方式，性能差很远。</li>
+</ol>
+</li>
+<li>针对常用的分类会统一缓存，缓存会主动更新；不常用的根据查询条件计算md5作为key 进行缓存，缓存时间不长，例如60分钟，防止短时间内大量访问压垮存储，例如爬虫</li>
+<li>缓存框架，Ehcache</li>
+</ul>
+<h3 id="PPC与TPC"><a href="#PPC与TPC" class="headerlink" title="PPC与TPC"></a>PPC与TPC</h3><ul>
+<li>高性能架构设<ul>
+<li>尽量提升单服务器的性能，将单服务器的性能发挥到极致</li>
+<li>如果单服务器无法支撑性能，设计服务器集群方案</li>
+</ul>
+</li>
+<li>单服务器高性能<ul>
+<li>服务器采取并发模型<ul>
+<li>设计点<ul>
+<li>服务器如何管理连接</li>
+<li>服务器如何处理请求</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>PPC（Process Per Connection）<ul>
+<li>每次有新的连接就新建一个进程去专门处理这个连接的请求，这是传统的 UNIX 网络服务器所采用的模型</li>
+<li>实现简单，实用于连接数不高</li>
+<li>弊端<ul>
+<li>fork 代价高：创建进程代价高，需要分配内核资源，需要将内存映象从父进程复制到子进程</li>
+<li>父子进程通信复杂：父进程“fork”子进程后，文件描述符可以通过内存映象复制从父进程传到子进程，但“fork”后，父子进程通信比较麻烦，需要IPC之类的通信方案</li>
+<li>支持的并发连接数有限</li>
+</ul>
+</li>
+<li>Prefrok<ul>
+<li>提前创建</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TPC（Thread Per Connection）<ul>
+<li>每次有新的连接就新建一个线程去专门处理这个连接的请求</li>
+<li>好处<ul>
+<li>线程更加轻量级，创建线程的消耗比进程小的多</li>
+<li>多线程共享内存空间的，线程通信比进程通信更加简单</li>
+</ul>
+</li>
+<li>问题<ul>
+<li>创建线程代价虽低，高并发下还是有性能问题</li>
+<li>无须进程间通信，但是线程间的互斥和共享又引入了新的复杂度，可能导致死锁</li>
+<li>多线程会互相影响的情况，某线程异常可能导致整个进程退出</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TPC还存在CPU线程调度和切换的问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="Reactor和Proactor"><a href="#Reactor和Proactor" class="headerlink" title="Reactor和Proactor"></a>Reactor和Proactor</h3><ul>
+<li><p>Reactor</p>
+<ul>
+<li>I/O 多路复用技术归纳起来有两个关键实现点<ul>
+<li>当多条连接共用一个阻塞对象后，进程只需要在一个阻塞对象上等待，而无须再轮询所有连接，常见的实现方式有 select、epoll、kqueue 等</li>
+<li>当某条连接有新的数据可以处理时，操作系统会通知进程，进程从阻塞状态返回，开始进行业务处理</li>
+</ul>
+</li>
+<li>Reactor 模式三个典型的方案<ul>
+<li>单 Reactor 单进程/线程</li>
+<li>单 Reactor 多线程</li>
+<li>多 Reactor 多进程/线程</li>
+</ul>
+</li>
+<li>单 Reactor<ul>
+<li>只适用于业务处理非常快速的场景 Redis</li>
+<li>简单</li>
+<li>没有进程通信</li>
+<li>没有进程竞争</li>
+<li>只有一个进程，无法发挥多核CPU的性能</li>
+<li>Handler 在处理某个连接上的业务时，整个进程只适用于业务处理非常快速的场景</li>
+</ul>
+</li>
+<li>单 Reactor 多线程<ul>
+<li></li>
+<li>可以利用多核多CPU的处理能力</li>
+<li>多线程共享和访问比较复杂</li>
+<li>Reactor  承担所有事件的监听和响应，只在主线程中运行，瞬间高并发会成为性能瓶颈</li>
+</ul>
+</li>
+<li>多 Reactor 多进程/线程<ul>
+<li>实现起来更简单<ul>
+<li>父子进程的职责非常明确，父进程只负责接受新连接，子进程负责后续的业务处理</li>
+<li>父子进程的交互很简单，父进程只需要把新连接传给子进程，子进程无须返回数据</li>
+<li>子进程之间是互相独立的，无须同步共享之类的处理</li>
+</ul>
+</li>
+<li>多 Reactor 多进程 Nginx</li>
+<li>多 Reactor 多线程 Memcache</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Proactor</p>
+<ul>
+<li>异步 I/O</li>
+<li>Windows 下通过 IOCP 实现了真正的异步 I/O</li>
+<li>linux下用多线程和epoll来做多reactor</li>
+</ul>
+</li>
+<li><p>TPS - T - transaction  写请求</p>
+</li>
+<li>QPS - Q - query 读请求</li>
+</ul>
+<h3 id="负载均衡算法"><a href="#负载均衡算法" class="headerlink" title="负载均衡算法"></a>负载均衡算法</h3><ul>
+<li>任务平分类s</li>
+<li>负载均衡类</li>
+<li>性能最优类</li>
+<li><p>hash类</p>
+</li>
+<li><p>轮询</p>
+</li>
+<li>加权轮询</li>
+<li>负载最低优先</li>
+<li>性能最优类</li>
+<li>hash 类<ul>
+<li>源地址hash</li>
+<li>ID hash</li>
+</ul>
+</li>
+</ul>
+<h3 id="CAP"><a href="#CAP" class="headerlink" title="CAP"></a>CAP</h3><ul>
+<li>C Consistency</li>
+<li>A Avaliability</li>
+<li>P parttition Tolerance</li>
+<li>P要求分布式和数据同步，C要求数据完全一致，A要求返回及时</li>
+</ul>
+<h3 id="双机架构"><a href="#双机架构" class="headerlink" title="双机架构"></a>双机架构</h3><h4 id="主备复制"><a href="#主备复制" class="headerlink" title="主备复制"></a>主备复制</h4><ul>
+<li>提供备份服务 </li>
+<li>优点<ul>
+<li>实现简单</li>
+<li>客户机无需感知备机的存在</li>
+<li>主/备机来说，只需进行数据复制即可，无需状态判断及主备切换类的复杂操作</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>备机只为备份，没有读写操作，硬件成本浪费</li>
+<li>故障后需人工干预，无法自动恢复</li>
+</ul>
+</li>
+</ul>
+<h4 id="主从复制"><a href="#主从复制" class="headerlink" title="主从复制"></a>主从复制</h4><ul>
+<li>提供“读”的服务</li>
+<li>优点<ul>
+<li>主机故障，读操作相关业务可以继续运行</li>
+<li>从机提供读操作，发挥了硬件性能</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>客户端感知主从关系，将不同的操作发送给不同的机器进行处理，复杂度比主备复杂度高</li>
+<li>从机提供读业务，若主从复制延迟较大，业务数据不一致问题</li>
+<li>故障需人工干预</li>
+</ul>
+</li>
+<li>写少读多业务， BBD、新闻类网站</li>
+</ul>
+<h4 id="双机切换"><a href="#双机切换" class="headerlink" title="双机切换"></a>双机切换</h4><ul>
+<li>共性问题<ul>
+<li>主机故障后，无法进行写操作</li>
+<li>如果主机无法恢复，需要人工进行新的主机角色</li>
+</ul>
+</li>
+<li>主备间状态判断<ul>
+<li>状态传递的渠道</li>
+<li>状态检测的内容</li>
+</ul>
+</li>
+<li>切换决策<ul>
+<li>切换时机</li>
+<li>切换策略</li>
+<li>自动程度</li>
+</ul>
+</li>
+<li>数据冲突解决</li>
+<li>常见架构<ul>
+<li>互链式<ul>
+<li>状态传递的通道本身有故障</li>
+<li>多通道、决策复杂</li>
+</ul>
+</li>
+<li>中介式<ul>
+<li>连接管理更简单</li>
+<li>状态决策更简单</li>
+<li>中介管理<ul>
+<li>Zookeeper Keepalived</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>模拟式</li>
+</ul>
+</li>
+</ul>
+<h4 id="主主复制"><a href="#主主复制" class="headerlink" title="主主复制"></a>主主复制</h4><ul>
+<li>不存在切换</li>
+<li>无需区分角色</li>
+<li>数据一致性，双向复制</li>
+<li>临时性、可丢失、可覆盖的数据场景</li>
+</ul>
+<h3 id="集群和分区"><a href="#集群和分区" class="headerlink" title="集群和分区"></a>集群和分区</h3><h4 id="数据集群"><a href="#数据集群" class="headerlink" title="数据集群"></a>数据集群</h4><ul>
+<li>数据集中集群<ul>
+<li>主机如何将数据复制给备机</li>
+<li>备机如何检测主机状态</li>
+<li>主机故障后，如何决定新的主机（ZooKeeper）</li>
+</ul>
+</li>
+<li>数据分散集群<ul>
+<li>多服务器组成集群，单台负责存储部分数据，备份部分数据</li>
+<li>均衡性</li>
+<li>容错性</li>
+<li>可伸缩性</li>
+</ul>
+</li>
+</ul>
+<h4 id="数据分区"><a href="#数据分区" class="headerlink" title="数据分区"></a>数据分区</h4><ul>
+<li>考虑：<ul>
+<li>数据量</li>
+<li>分区规则</li>
+<li>复制规则<ul>
+<li>集中式</li>
+<li>互备式</li>
+<li>独立式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="设计计算高可用架构"><a href="#设计计算高可用架构" class="headerlink" title="设计计算高可用架构"></a>设计计算高可用架构</h3><ul>
+<li>任务管理</li>
+<li>哪些服务器可以执行任务</li>
+<li>任务如何重新执行</li>
+</ul>
+<h4 id="主备"><a href="#主备" class="headerlink" title="主备"></a>主备</h4><ul>
+<li>主机执行所有计算任务。例如，读写数据、执行操作等</li>
+<li>当主机故障（例如，主机宕机）时，任务分配器不会自动将计算任务，此时系统处于不可用状态</li>
+<li>当主机故障（例如，主机宕机）时，任务分配器不会自动将计算任务</li>
+<li>如果主机能够恢复（不管是人工恢复还是自动恢复），任务分配器继续将任务发送给主机</li>
+<li>如果主机不能够恢复（例如，机器硬盘损坏，短时间内无法恢复），则需要人工操作，将备机升为主机，然后让任务分配器将任务发送给新的主机（即原来的备机），同时，为了继续保持主备架构，需要人工增加新的机器作为备机<ul>
+<li>冷备</li>
+<li>温备</li>
+</ul>
+</li>
+</ul>
+<h4 id="主从"><a href="#主从" class="headerlink" title="主从"></a>主从</h4><ul>
+<li>正常情况下，主机执行部分计算任务，备机执行部分计算任务z</li>
+<li>当主机故障，任务分配器不会自动将原来发送给主机的任务发送给从机，而是继续发送给主机，无论是否成功</li>
+<li>若主机能够恢复，任务分配器继续按照原有的设计策略分配任务</li>
+<li>若主机不能恢复，需人工操作，原来从机升级为主机，增加从机<ul>
+<li>从机也执行任务，发挥从机的硬件性能</li>
+<li>任务分类，任务分配器复杂</li>
+</ul>
+</li>
+</ul>
+<h4 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h4><ul>
+<li>对称集群</li>
+<li>负载均衡集群<ul>
+<li>选取分配策略</li>
+<li>检测服务器状态</li>
+</ul>
+</li>
+<li>非对称集群<ul>
+<li>任务分配策略更加复杂：需要将任务划分为不同类型并分配给不同角色的集群节点</li>
+<li>角色分配策略实现比较复杂：ZAB,Raft实现leader</li>
+</ul>
+</li>
+</ul>
+<h3 id="异地多活"><a href="#异地多活" class="headerlink" title="异地多活"></a>异地多活</h3><p>  本质是通过异地的数据冗余，保证在极端情况下业务也能正常提供给用户<br>  核心：数据的同步</p>
+<h4 id="标准"><a href="#标准" class="headerlink" title="标准"></a>标准</h4><ol>
+<li>正常情况下，用户无论访问哪个地方业务系统，都能得到正确的业务服务  </li>
+<li>某个业务系统异常，访问其他地方业务系统，能够得到正确的业务系统</li>
+</ol>
+<h4 id="架构模式"><a href="#架构模式" class="headerlink" title="架构模式"></a>架构模式</h4><ul>
+<li>复杂度、成本、发生概率</li>
+<li>同城异区<ul>
+<li>机房级别的故障最优</li>
+<li>延迟较小，当做本地机房</li>
+</ul>
+</li>
+<li>跨城异地<ul>
+<li>距离较远带来网络延迟问题</li>
+<li>数据强一致性不适用</li>
+</ul>
+</li>
+<li>跨国异地<ul>
+<li>为不同地区的用户提供服务</li>
+<li>只读类业务做多活</li>
+</ul>
+</li>
+</ul>
+<h4 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h4><p>  使用多种手段，保证绝大部分用户的核心业务异地多活</p>
+<ul>
+<li>保证核心业务的异地多活</li>
+<li>保证核心业务的最终一致性<ul>
+<li>尽量减少异地多活机房的距离，搭建高速网络</li>
+<li>尽量减少数据同步，只同步核心业务相关的数据</li>
+<li>保证最终一致性，不保证实时一致性</li>
+</ul>
+</li>
+<li>采用多种手段同步数据<ul>
+<li>mysql5.1 单线程的复制</li>
+<li>避免只使用存储系统自带的同步功能</li>
+<li>消息队列方式</li>
+<li>二次读取</li>
+<li>存储系统同步方式</li>
+<li>回源读方式</li>
+<li>重新生成数据方式</li>
+</ul>
+</li>
+<li>只保证绝大部分用户的异地多活</li>
+</ul>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ul>
+<li>业务分级<ul>
+<li>只为核心业务设计异地多活，降低整体复杂度和实现成本</li>
+<li>分级标准<ul>
+<li>访问量达的业务</li>
+<li>核心业务</li>
+<li>收入业务</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据分类<ul>
+<li>数据特征分析维度<ul>
+<li>数据量</li>
+<li>唯一性</li>
+<li>实时性</li>
+<li>可丢失性</li>
+<li>可恢复性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据同步<ul>
+<li>存储系统同步</li>
+<li>消息队列同步<ul>
+<li>无事物或无时序性</li>
+</ul>
+</li>
+<li>重复生成</li>
+</ul>
+</li>
+<li>异常处理<ul>
+<li>目的<ul>
+<li>问题发生时，避免少量数据异常导致整体业务不可用</li>
+<li>问题恢复后，将异常的数据进行修正</li>
+<li>对用户进行安抚，弥补用户损失</li>
+</ul>
+</li>
+<li>处理措施<ul>
+<li>多通道同步</li>
+<li>同步和访问结合</li>
+<li>日志记录</li>
+<li>用户补偿</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="可拓展架构"><a href="#可拓展架构" class="headerlink" title="可拓展架构"></a>可拓展架构</h3><p>  拆</p>
+<h4 id="拆分思路"><a href="#拆分思路" class="headerlink" title="拆分思路"></a>拆分思路</h4><ul>
+<li>面向流程拆分</li>
+<li>面向服务拆分</li>
+<li>面向功能拆分</li>
+<li>不同的拆分方式，本质上决定了系统的扩展方式<ul>
+<li>面向流程拆分<ul>
+<li>扩展时大部分情况只需要修改某一层，少部分情况可能修改关联的两层，不会出现所有层都同时要修改</li>
+<li>分成架构</li>
+</ul>
+</li>
+<li>面向服务拆分<ul>
+<li>对某个服务扩展，或者要增加新的服务时，只需要扩展相关服务即可，无须修改所有的服务</li>
+<li>SOA, 微服务</li>
+</ul>
+</li>
+<li>面向功能拆分<ul>
+<li>对某个功能扩展，或者要增加新的功能时，只需要扩展相关功能即可，无须修改所有的服务 </li>
+<li>微内核架构</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/29/frontend/http2/" rel="next" title="http2">
+                <i class="fa fa-chevron-left"></i> http2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/setting/avatar.jpg"
+                alt="侬你个啥" />
+            
+              <p class="site-author-name" itemprop="name">侬你个啥</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#架构设计的目的"><span class="nav-text">架构设计的目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度"><span class="nav-text">复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细设计原则"><span class="nav-text">详细设计原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高性能数据库集群"><span class="nav-text">高性能数据库集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nosql"><span class="nav-text">Nosql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存架构"><span class="nav-text">缓存架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PPC与TPC"><span class="nav-text">PPC与TPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reactor和Proactor"><span class="nav-text">Reactor和Proactor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡算法"><span class="nav-text">负载均衡算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAP"><span class="nav-text">CAP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双机架构"><span class="nav-text">双机架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主备复制"><span class="nav-text">主备复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主从复制"><span class="nav-text">主从复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双机切换"><span class="nav-text">双机切换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主主复制"><span class="nav-text">主主复制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群和分区"><span class="nav-text">集群和分区</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集群"><span class="nav-text">数据集群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据分区"><span class="nav-text">数据分区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计计算高可用架构"><span class="nav-text">设计计算高可用架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主备"><span class="nav-text">主备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主从"><span class="nav-text">主从</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集群"><span class="nav-text">集群</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异地多活"><span class="nav-text">异地多活</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标准"><span class="nav-text">标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#架构模式"><span class="nav-text">架构模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技巧"><span class="nav-text">技巧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤"><span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可拓展架构"><span class="nav-text">可拓展架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拆分思路"><span class="nav-text">拆分思路</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">侬你个啥</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

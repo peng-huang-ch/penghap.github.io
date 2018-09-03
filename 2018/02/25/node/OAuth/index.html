@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:site_name" content="跬步">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-02T14:07:02.965Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.1',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/about/"/>
+
+
+
+
+
+  <title>OAuth 2.0 | 跬步</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">跬步</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">至千里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/node/OAuth/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="侬你个啥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/setting/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="跬步">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">OAuth 2.0</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-25T00:00:00+08:00">2018-02-25</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/node/" itemprop="url" rel="index">
+                    <span itemprop="name">node</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>  OAuth 2.0是授权相关的标准协议。OAuth 2.0取代了在2006年创建的原始OAuth协议上所做的工作。OAuth 2.0专注于客户端开发人员的简单性，同时为Web应用程序，桌面应用程序，手机和客厅设备提供特定的授权流程.</p>
+<h3 id="二、核心概念"><a href="#二、核心概念" class="headerlink" title="二、核心概念"></a>二、核心概念</h3><ul>
+<li>OAuth 2.0框架 - RFC 6749</li>
+<li>OAuth 2.0授权类型<ul>
+<li>Authorization Code（ 授权码模式 ）</li>
+<li>Implicit（ 隐式模式 ）</li>
+<li>Password（ 密码模式 ）</li>
+<li>Client Credentials（ 客户端模式 ）</li>
+<li>Device Code（ 设备码 ）</li>
+<li>Refresh Token（ 刷新码 ）</li>
+</ul>
+</li>
+<li>OAuth 2.0 Bearer Tokens（ 无记名令牌 ）</li>
+</ul>
+<h3 id="三、协议流程"><a href="#三、协议流程" class="headerlink" title="三、协议流程"></a>三、<a href="https://tools.ietf.org/html/rfc6749" target="_blank" rel="noopener">协议流程</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">+--------+                                    +---------------+</span><br><span class="line">|        |--(A)- Authorization Request -&gt;|   Resource    |</span><br><span class="line">|        |                               |     Owner     |</span><br><span class="line">|        |&lt;-(B)-- Authorization Grant ---|               |</span><br><span class="line">|        |                               +---------------+</span><br><span class="line">|        |</span><br><span class="line">|        |                               +---------------+</span><br><span class="line">|        |--(C)-- Authorization Grant --&gt;| Authorization |</span><br><span class="line">| Client |                               |     Server    |</span><br><span class="line">|        |&lt;-(D)----- Access Token -------|               |</span><br><span class="line">|        |                               +---------------+</span><br><span class="line">|        |</span><br><span class="line">|        |                               +---------------+</span><br><span class="line">|        |--(E)----- Access Token ------&gt;|    Resource   |</span><br><span class="line">|        |                               |     Server    |</span><br><span class="line">|        |&lt;-(F)--- Protected Resource ---|               |</span><br><span class="line">+--------+                               +---------------+</span><br></pre></td></tr></table></figure>
+<p>流程描述:</p>
+<ul>
+<li>A 客户端请求用户给予授权</li>
+<li>B 用户给予客户端授权</li>
+<li>C 客户端使用B给予授权，申请令牌</li>
+<li>D 认证服务器确认，给予AccessToken</li>
+<li>E 客户端使用令牌，获取资源</li>
+<li>F 服务器确认，返回信息</li>
+</ul>
+<h3 id="四、服务端实现"><a href="#四、服务端实现" class="headerlink" title="四、服务端实现"></a>四、服务端实现</h3><h4 id="4-1、提供一个授权页面（-oauth-authorize）用于登陆授权"><a href="#4-1、提供一个授权页面（-oauth-authorize）用于登陆授权" class="headerlink" title="4.1、提供一个授权页面（/oauth/authorize）用于登陆授权"></a>4.1、提供一个授权页面（/oauth/authorize）用于登陆授权</h4><p>页面会重定向到URL</p>
+<pre><code>http://127.0.0.1:5700/auth/****/callback?code=99660996228df4a2947af7c9869b960b8a452e08
+</code></pre><p><img src="/images/oauth/authorize.png" alt="image"></p>
+<h4 id="4-2、根据授权码获取accessToken"><a href="#4-2、根据授权码获取accessToken" class="headerlink" title="4.2、根据授权码获取accessToken"></a>4.2、根据授权码获取accessToken</h4><p>根据上一步获取的code，得到accessToken<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">POST /oauth/access_token HTTP/1.1</span><br><span class="line">Host: 127.0.0.1:5700</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Authorization: Basic d2ViaW1hZ2VyeDpwZjdUYUt4QXlpV0Q3RllN</span><br><span class="line">grant_type=authorization_code&amp;redirect_uri=&apos;&apos;&amp;code=99660996228df4a2947af7c9869b960b8a452e08</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/oauth/accessToken.png" alt="image"><br><img src="/images/oauth/accessHeader.png" alt="image"></p>
+<h4 id="4-3、根据accessToken获取用户信息"><a href="#4-3、根据accessToken获取用户信息" class="headerlink" title="4.3、根据accessToken获取用户信息"></a>4.3、根据accessToken获取用户信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /api/user HTTP/1.1</span><br><span class="line">Host: localhost:5700</span><br><span class="line">Authorization: Bearer dca31d4ff0d5a8d1a80f9acf149908bcff468b2f</span><br></pre></td></tr></table></figure>
+<p><img src="/images/oauth/profile.png" alt="image"></p>
+<h3 id="五、oauth2-server"><a href="#五、oauth2-server" class="headerlink" title="五、oauth2-server"></a>五、oauth2-server</h3><p>授权码模式下需实现方法:</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> generateAccessToken(client, user, scope, [callback]) 可选</li>
+<li style="list-style: none"><input type="checkbox"> generateRefreshToken(client, user, scope, [callback]) 可选</li>
+<li style="list-style: none"><input type="checkbox"> generateAuthorizationCode(client, user, scope, [callback]) 可选</li>
+<li style="list-style: none"><input type="checkbox" checked> getAuthorizationCode(authorizationCode, [callback])</li>
+<li style="list-style: none"><input type="checkbox" checked> getClient(clientId, clientSecret, [callback])</li>
+<li style="list-style: none"><input type="checkbox" checked> saveToken(token, client, user, [callback])</li>
+<li style="list-style: none"><input type="checkbox" checked> saveAuthorizationCode(code, client, user, [callback])</li>
+<li style="list-style: none"><input type="checkbox" checked> revokeAuthorizationCode(code, [callback])</li>
+<li style="list-style: none"><input type="checkbox" checked> validateScope(user, client, scope, [callback])</li>
+</ul>
+<h4 id="5-1、generateAccessToken-client-user-scope-callback"><a href="#5-1、generateAccessToken-client-user-scope-callback" class="headerlink" title="5.1、generateAccessToken(client, user, scope, [callback])"></a>5.1、generateAccessToken(client, user, scope, [callback])</h4><p>生成accessToken，默认生成长度为40字节的字符串</p>
+<h4 id="5-2、generateRefreshToken-client-user-scope-callback"><a href="#5-2、generateRefreshToken-client-user-scope-callback" class="headerlink" title="5.2、generateRefreshToken(client, user, scope, [callback])"></a>5.2、generateRefreshToken(client, user, scope, [callback])</h4><p>生成refreshToken，默认生成长度为40字节的字符串</p>
+<h4 id="5-3、generateAuthorizationCode-client-user-scope-callback"><a href="#5-3、generateAuthorizationCode-client-user-scope-callback" class="headerlink" title="5.3、generateAuthorizationCode(client, user, scope, [callback])"></a>5.3、generateAuthorizationCode(client, user, scope, [callback])</h4><p>生成authorizationCode，默认生成长度为40字节的字符串</p>
+<h4 id="5-4、getAuthorizationCode-authorizationCode-callback"><a href="#5-4、getAuthorizationCode-authorizationCode-callback" class="headerlink" title="5.4、getAuthorizationCode(authorizationCode, [callback])"></a>5.4、getAuthorizationCode(authorizationCode, [callback])</h4><p>获取AuthorizationCode<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getAuthorizationCode = <span class="function"><span class="keyword">function</span>(<span class="params">authCode, cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> query = &#123; <span class="attr">authorizationCode</span>: authCode &#125;;</span><br><span class="line">  authCodeModel.findOne(query)</span><br><span class="line">    .populate(<span class="string">'user'</span>, <span class="string">'_id name avatar email role scope'</span>)</span><br><span class="line">    .populate(<span class="string">'client'</span>, <span class="string">'_id title client_id user redirectUris grants scope public'</span>).lean()</span><br><span class="line">    .exec(<span class="function"><span class="keyword">function</span>(<span class="params">err, code</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">let</span> client = <span class="literal">null</span>;</span><br><span class="line">      <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="keyword">return</span> cb(err);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (!code) &#123;</span><br><span class="line">        <span class="keyword">return</span> cb(<span class="string">'no authCode'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (client = code.client) &#123;</span><br><span class="line">        client.id = client.client_id;</span><br><span class="line">        code.client = client;</span><br><span class="line">      &#125;</span><br><span class="line">      cb(<span class="literal">null</span>, code);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-5、getClient-clientId-clientSecret-callback"><a href="#5-5、getClient-clientId-clientSecret-callback" class="headerlink" title="5.5、getClient(clientId, clientSecret, [callback])"></a>5.5、getClient(clientId, clientSecret, [callback])</h4><p>获取应用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getClient = <span class="function"><span class="keyword">function</span>(<span class="params">clientId, clientSecret, cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> query = &#123; <span class="attr">client_id</span>: clientId &#125;;</span><br><span class="line">  <span class="keyword">let</span> projections = <span class="string">'_id title client_id redirectUris grants scope public'</span>;</span><br><span class="line">  <span class="keyword">if</span> (clientSecret) &#123; query.client_secret = clientSecret &#125;</span><br><span class="line">  clientModel.findOne(query, projections).lean().exec(<span class="function"><span class="keyword">function</span>(<span class="params">err, client&#123;</span></span></span><br><span class="line"><span class="function"><span class="params">    if (!client</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> cb(<span class="string">'client not found'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    client.id = clientId;</span><br><span class="line">    <span class="keyword">return</span> cb(err, client);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-6、saveToken-token-client-user-callback"><a href="#5-6、saveToken-token-client-user-callback" class="headerlink" title="5.6、saveToken(token, client, user, [callback])"></a>5.6、saveToken(token, client, user, [callback])</h4><p>生成 accessToken和refreshToken<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> saveToken = <span class="function"><span class="keyword">function</span>(<span class="params">token, client, user, cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> fns = [</span><br><span class="line">    accessTokenModel.create(&#123;</span><br><span class="line">      accessToken: token.accessToken,</span><br><span class="line">      accessTokenExpiresAt: token.accessTokenExpiresAt,</span><br><span class="line">      client: client._id,</span><br><span class="line">      user: user._id,</span><br><span class="line">      scope: token.scope</span><br><span class="line">    &#125;), token.refreshToken ? refreshTokenModel.create(&#123;</span><br><span class="line">      refreshToken: token.refreshToken,</span><br><span class="line">      refreshTokenExpiresAt: token.refreshTokenExpiresAt,</span><br><span class="line">      client: client._id,</span><br><span class="line">      user: user._id,</span><br><span class="line">      scope: token.scope</span><br><span class="line">    &#125;) : <span class="built_in">Promise</span>.resolve()</span><br><span class="line">  ];</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.all(fns)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> ret = _.assign(&#123;</span><br><span class="line">      client: client,</span><br><span class="line">      user: user</span><br><span class="line">    &#125;, token);</span><br><span class="line">    <span class="keyword">return</span> cb(<span class="literal">null</span>, ret);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> cb(err);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-7、saveAuthorizationCode-code-client-user-callback"><a href="#5-7、saveAuthorizationCode-code-client-user-callback" class="headerlink" title="5.7、saveAuthorizationCode(code, client, user, [callback])"></a>5.7、saveAuthorizationCode(code, client, user, [callback])</h4><p>生成 authorizationCode<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> saveAuthorizationCode = <span class="function"><span class="keyword">function</span>(<span class="params">code, client, user, cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> doc = &#123;</span><br><span class="line">    expiresAt: code.expiresAt,</span><br><span class="line">    client: client._id,</span><br><span class="line">    authorizationCode: code.authorizationCode,</span><br><span class="line">    user: user._id,</span><br><span class="line">    scope: code.scope</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> authCodeModel.create(doc, <span class="function"><span class="keyword">function</span>(<span class="params">err, code</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> cb(err);</span><br><span class="line">    &#125;</span><br><span class="line">    code = _.pick(code, [<span class="string">'authorizationCode'</span>, <span class="string">'expiresAt'</span>]);</span><br><span class="line">    <span class="keyword">return</span> cb(<span class="literal">null</span>, code);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-8、revokeAuthorizationCode-code-callback"><a href="#5-8、revokeAuthorizationCode-code-callback" class="headerlink" title="5.8、revokeAuthorizationCode(code, [callback])"></a>5.8、revokeAuthorizationCode(code, [callback])</h4><p>将authorizationCode置为无效<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> revokeToken = <span class="function"><span class="keyword">function</span>(<span class="params">token, cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> query = &#123;</span><br><span class="line">    refreshToken: token.refreshToken</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> update = &#123;</span><br><span class="line">    expiresAt: <span class="built_in">Date</span>.now()</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> refreshTokenModel.findOneAndUpdate(query, update, cb);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-9、validateScope-user-client-scope-callback"><a href="#4-9、validateScope-user-client-scope-callback" class="headerlink" title="4.9、validateScope(user, client, scope, [callback])"></a>4.9、validateScope(user, client, scope, [callback])</h4><p>验证scope的有效性<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> validateScope = <span class="function"><span class="keyword">function</span>(<span class="params">user, client, scope</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="六、表模型"><a href="#六、表模型" class="headerlink" title="六、表模型"></a>六、表模型</h3><h4 id="6-1、accessToken"><a href="#6-1、accessToken" class="headerlink" title="6.1、accessToken"></a>6.1、accessToken</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> accessTokenSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  user: &#123;</span><br><span class="line">    type: mongoose.Schema.Types.ObjectId,</span><br><span class="line">    ref: <span class="string">'user'</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  client: &#123;</span><br><span class="line">    type: mongoose.Schema.Types.ObjectId,</span><br><span class="line">    ref: <span class="string">'client'</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  accessToken: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span>,</span><br><span class="line">    unique: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  scope: <span class="built_in">String</span>,</span><br><span class="line">  accessTokenExpiresAt: <span class="built_in">Date</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">accessTokenSchema.index(&#123;</span><br><span class="line">  userId: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">accessTokenSchema.index(&#123;</span><br><span class="line">  clientId: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> accessTokenModel = mongoose.model(<span class="string">'oauthAccessToken'</span>, accessTokenSchema);</span><br></pre></td></tr></table></figure>
+<h4 id="6-2、authCode"><a href="#6-2、authCode" class="headerlink" title="6.2、authCode"></a>6.2、authCode</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> authCodeSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  authorizationCode: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  user: &#123;</span><br><span class="line">    type: mongoose.Schema.Types.ObjectId,</span><br><span class="line">    ref: <span class="string">'user'</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  client: &#123;</span><br><span class="line">    type: mongoose.Schema.Types.ObjectId,</span><br><span class="line">    ref: <span class="string">'client'</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  redirectUri: <span class="built_in">String</span>,</span><br><span class="line">  scope: <span class="built_in">String</span>,</span><br><span class="line">  expiresAt: <span class="built_in">Date</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">authCodeSchema.index(&#123;</span><br><span class="line">  userId: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">authCodeSchema.index(&#123;</span><br><span class="line">  clientId: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> authCodeModel = mongoose.model(<span class="string">'oauthCode'</span>, authCodeSchema);</span><br></pre></td></tr></table></figure>
+<h4 id="6-3、refreshToken"><a href="#6-3、refreshToken" class="headerlink" title="6.3、refreshToken"></a>6.3、refreshToken</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span>  mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> refreshTokenSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  user: &#123;</span><br><span class="line">    type: mongoose.Schema.Types.ObjectId,</span><br><span class="line">    ref: <span class="string">'user'</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  client: &#123;</span><br><span class="line">    type: mongoose.Schema.Types.ObjectId,</span><br><span class="line">    ref: <span class="string">'client'</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  refreshToken: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span>,</span><br><span class="line">    unique: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  scope: <span class="built_in">String</span>,</span><br><span class="line">  refreshTokenExpiresAt: <span class="built_in">Date</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">refreshTokenSchema.index(&#123;</span><br><span class="line">  userId: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">refreshTokenSchema.index(&#123;</span><br><span class="line">  clientId: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> refreshTokenModel = mongoose.model(<span class="string">'oauthRefreshToken'</span>, refreshTokenSchema);</span><br></pre></td></tr></table></figure>
+<h4 id="6-4、scope"><a href="#6-4、scope" class="headerlink" title="6.4、scope"></a>6.4、scope</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> scopeSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  scope: <span class="built_in">String</span>,</span><br><span class="line">  is_default: <span class="built_in">Boolean</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">scopeSchema.index(&#123;</span><br><span class="line">  scope: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">scopeSchema.index(&#123;</span><br><span class="line">  is_default: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> scopeModel = mongoose.model(<span class="string">'oauthScope'</span>, scopeSchema);</span><br></pre></td></tr></table></figure>
+<h4 id="6-5、client"><a href="#6-5、client" class="headerlink" title="6.5、client"></a>6.5、client</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> clientSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  title: <span class="built_in">String</span>,</span><br><span class="line">  client_name: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  client_id: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span>,</span><br><span class="line">    unique: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  client_secret: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  url: <span class="built_in">String</span>,</span><br><span class="line">  user: &#123;</span><br><span class="line">    type: mongoose.Schema.Types.ObjectId,</span><br><span class="line">    ref: <span class="string">'user'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  owners: [</span><br><span class="line">    &#123;</span><br><span class="line">      type: mongoose.Schema.Types.ObjectId,</span><br><span class="line">      ref: <span class="string">'user'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"public"</span>: &#123;</span><br><span class="line">    type: <span class="built_in">Boolean</span>,</span><br><span class="line">    <span class="string">"default"</span>: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  dongle: &#123;</span><br><span class="line">    type: <span class="built_in">Boolean</span>,</span><br><span class="line">    <span class="string">"default"</span>: <span class="literal">false</span></span><br><span class="line">  &#125;,</span><br><span class="line">  redirectUris: &#123;</span><br><span class="line">    type: [<span class="built_in">String</span>]</span><br><span class="line">  &#125;,</span><br><span class="line">  grants: &#123;</span><br><span class="line">    type: [<span class="built_in">String</span>],</span><br><span class="line">    <span class="string">"default"</span>: [<span class="string">'authorization_code'</span>, <span class="string">'password'</span>, <span class="string">'refresh_token'</span>, <span class="string">'client_credentials'</span>]</span><br><span class="line">  &#125;,</span><br><span class="line">  scope: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    <span class="string">"default"</span>: <span class="string">'profile'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  createAt: &#123;</span><br><span class="line">    type: <span class="built_in">Date</span>,</span><br><span class="line">    <span class="string">"default"</span>: <span class="built_in">Date</span>.now</span><br><span class="line">  &#125;,</span><br><span class="line">  updateAt: &#123;</span><br><span class="line">    type: <span class="built_in">Date</span>,</span><br><span class="line">    <span class="string">"default"</span>: <span class="built_in">Date</span>.now</span><br><span class="line">  &#125;,</span><br><span class="line">  icon: <span class="built_in">String</span>,</span><br><span class="line">  summary: <span class="built_in">String</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">clientSchema.index(&#123;</span><br><span class="line">  client_id: <span class="number">1</span>,</span><br><span class="line">  title: <span class="number">1</span>,</span><br><span class="line">  createAt: <span class="number">1</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> clientModel = mongoose.model(<span class="string">'client'</span>, clientSchema);</span><br></pre></td></tr></table></figure>
+<h3 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h3><ul>
+<li><a href="https://oauth.net/2/" target="_blank" rel="noopener">oauth</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="noopener">理解OAuth 2.0</a></li>
+<li><a href="https://github.com/manjeshpv/node-oauth2-server-implementation" target="_blank" rel="noopener">node-oauth2-server-implementation</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/node/" rel="tag"># node</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/27/db/mongodb/" rel="next" title="mongodb基本操作">
+                <i class="fa fa-chevron-left"></i> mongodb基本操作
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/03/node/docker/" rel="prev" title="docker">
+                docker <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/setting/avatar.jpg"
+                alt="侬你个啥" />
+            
+              <p class="site-author-name" itemprop="name">侬你个啥</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、介绍"><span class="nav-text">一、介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、核心概念"><span class="nav-text">二、核心概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、协议流程"><span class="nav-text">三、协议流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、服务端实现"><span class="nav-text">四、服务端实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1、提供一个授权页面（-oauth-authorize）用于登陆授权"><span class="nav-text">4.1、提供一个授权页面（/oauth/authorize）用于登陆授权</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2、根据授权码获取accessToken"><span class="nav-text">4.2、根据授权码获取accessToken</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3、根据accessToken获取用户信息"><span class="nav-text">4.3、根据accessToken获取用户信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、oauth2-server"><span class="nav-text">五、oauth2-server</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1、generateAccessToken-client-user-scope-callback"><span class="nav-text">5.1、generateAccessToken(client, user, scope, [callback])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2、generateRefreshToken-client-user-scope-callback"><span class="nav-text">5.2、generateRefreshToken(client, user, scope, [callback])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3、generateAuthorizationCode-client-user-scope-callback"><span class="nav-text">5.3、generateAuthorizationCode(client, user, scope, [callback])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4、getAuthorizationCode-authorizationCode-callback"><span class="nav-text">5.4、getAuthorizationCode(authorizationCode, [callback])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-5、getClient-clientId-clientSecret-callback"><span class="nav-text">5.5、getClient(clientId, clientSecret, [callback])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-6、saveToken-token-client-user-callback"><span class="nav-text">5.6、saveToken(token, client, user, [callback])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-7、saveAuthorizationCode-code-client-user-callback"><span class="nav-text">5.7、saveAuthorizationCode(code, client, user, [callback])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-8、revokeAuthorizationCode-code-callback"><span class="nav-text">5.8、revokeAuthorizationCode(code, [callback])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-9、validateScope-user-client-scope-callback"><span class="nav-text">4.9、validateScope(user, client, scope, [callback])</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、表模型"><span class="nav-text">六、表模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1、accessToken"><span class="nav-text">6.1、accessToken</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2、authCode"><span class="nav-text">6.2、authCode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3、refreshToken"><span class="nav-text">6.3、refreshToken</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4、scope"><span class="nav-text">6.4、scope</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5、client"><span class="nav-text">6.5、client</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文件"><span class="nav-text">参考文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">侬你个啥</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

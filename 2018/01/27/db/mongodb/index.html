@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:site_name" content="跬步">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-02T14:07:02.965Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.1',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/about/"/>
+
+
+
+
+
+  <title>mongodb基本操作 | 跬步</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">跬步</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">至千里</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/27/db/mongodb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="侬你个啥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/setting/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="跬步">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">mongodb基本操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-27T00:00:00+08:00">2018-01-27</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a><a href="https://docs.mongodb.com/manual/crud/" target="_blank" rel="noopener">官方文档</a></h3><h3 id="一、-新增-insert"><a href="#一、-新增-insert" class="headerlink" title="一、 新增(insert)"></a>一、 新增(insert)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.insert(&#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;)</span><br><span class="line">insert into users(`email`) values(<span class="string">"499871809@qq.com"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="二、-查询-find"><a href="#二、-查询-find" class="headerlink" title="二、 查询(find)"></a>二、 查询(find)</h3><h4 id="查询所有"><a href="#查询所有" class="headerlink" title="查询所有"></a>查询所有</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.find()</span><br><span class="line">select * from users</span><br></pre></td></tr></table></figure>
+<h4 id="条件查询（where）"><a href="#条件查询（where）" class="headerlink" title="条件查询（where）"></a>条件查询（where）</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;)</span><br><span class="line">select * from users <span class="built_in">where</span> email = <span class="string">"499871809@qq.com"</span></span><br></pre></td></tr></table></figure>
+<h4 id="指定键值（where）"><a href="#指定键值（where）" class="headerlink" title="指定键值（where）"></a>指定键值（where）</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;, &#123;email: 1, name: 1&#125;)</span><br><span class="line">select email, name from users <span class="built_in">where</span> email = <span class="string">"499871809@qq.com"</span></span><br></pre></td></tr></table></figure>
+<h4 id="并（and）"><a href="#并（and）" class="headerlink" title="并（and）"></a>并（and）</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span>, name: <span class="string">"hap"</span> &#125;, &#123;email: 1, name: 1&#125;)</span><br><span class="line">select email, name from users <span class="built_in">where</span> email = <span class="string">"499871809@qq.com"</span> and name = <span class="string">"hap"</span></span><br></pre></td></tr></table></figure>
+<h4 id="或（or）"><a href="#或（or）" class="headerlink" title="或（or）"></a>或（or）</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(<span class="string">"<span class="variable">$or</span>"</span>: [&#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;, &#123;name: <span class="string">"hap"</span>&#125;])</span><br><span class="line">select email, name from users <span class="built_in">where</span> email = <span class="string">"499871809@qq.com"</span> or name = <span class="string">"hap"</span></span><br></pre></td></tr></table></figure>
+<h4 id="符号对比"><a href="#符号对比" class="headerlink" title="符号对比"></a>符号对比</h4><table>
+<thead>
+<tr>
+<th>mongodb</th>
+<th>mysql</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$eq</td>
+<td>=</td>
+<td>{ age: { $eq: 18 } }, age = 18</td>
+</tr>
+<tr>
+<td>$ne</td>
+<td>!=</td>
+<td>{ age: { $ne: 18 } }, age != 18</td>
+</tr>
+<tr>
+<td>$gt</td>
+<td>&gt;</td>
+<td>{ age: { $gt: 18 } }, age &gt; 18</td>
+</tr>
+<tr>
+<td>$gte</td>
+<td>&gt;=</td>
+<td>{ age: { $gte: 18 } }, age &gt;= 18</td>
+</tr>
+<tr>
+<td>$lt</td>
+<td>&lt;</td>
+<td>{ age: { $lt: 18 } }, age &lt; 18</td>
+</tr>
+<tr>
+<td>$lte</td>
+<td>&lt;=</td>
+<td>{ age: { $lte: 18 } }, age &lt;= 18</td>
+</tr>
+<tr>
+<td>$in</td>
+<td>in</td>
+<td>{ age: { $in: [12, 15, 18] } }, age IN (12, 15, 18)</td>
+</tr>
+<tr>
+<td>$nin</td>
+<td>not in</td>
+<td>{ age: { $nin: [12, 15, 18] } }, age NOT IN (12, 15, 18)</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123;<span class="string">"age"</span>: &#123;<span class="variable">$gt</span>: 12, <span class="variable">$lt</span>: 18&#125;&#125;)</span><br><span class="line">select * from users <span class="built_in">where</span> age&gt;12 and age&lt;18</span><br></pre></td></tr></table></figure>
+<h4 id="模糊查询-like"><a href="#模糊查询-like" class="headerlink" title="模糊查询(like)"></a>模糊查询(like)</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123;<span class="string">"email"</span>: /4998/)</span><br><span class="line">select * from users <span class="built_in">where</span> email like <span class="string">"%4998%"</span></span><br></pre></td></tr></table></figure>
+<h4 id="数目-count"><a href="#数目-count" class="headerlink" title="数目(count)"></a>数目(count)</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.count(&#123;<span class="string">"email"</span>: /4998/)</span><br><span class="line">select count(*) from users <span class="built_in">where</span> email like <span class="string">"%4998%"</span></span><br></pre></td></tr></table></figure>
+<h4 id="排序-sort-order-by"><a href="#排序-sort-order-by" class="headerlink" title="排序(sort, order by)"></a>排序(sort, order by)</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123;<span class="string">"email"</span>: /4998/).sort(&#123;createAt: -1&#125;) <span class="comment">#降序</span></span><br><span class="line">select count(*) from users <span class="built_in">where</span> email like <span class="string">"%4998%"</span> order by createAt desc</span><br><span class="line"></span><br><span class="line">db.users.find(&#123;<span class="string">"email"</span>: /4998/).sort(&#123;createAt: 1&#125;) <span class="comment">#升序</span></span><br><span class="line">select count(*) from users <span class="built_in">where</span> email like <span class="string">"%4998%"</span> order by createAt asc</span><br></pre></td></tr></table></figure>
+<h3 id="三、-删除-remove"><a href="#三、-删除-remove" class="headerlink" title="三、 删除(remove)"></a>三、 删除(remove)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.remove(&#123;<span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span>&#125;)</span><br><span class="line">delete from users <span class="built_in">where</span> email = <span class="string">"499871809@qq.com"</span></span><br></pre></td></tr></table></figure>
+<h3 id="四、-更新-update"><a href="#四、-更新-update" class="headerlink" title="四、 更新(update)"></a>四、 更新(update)</h3><h4 id="update"><a href="#update" class="headerlink" title="update"></a>update</h4><p>mongodb更新命令<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collecions.update(query, update[, options] )</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; age: 24 &#125;</span><br><span class="line">options = &#123; update: <span class="literal">true</span> &#125;</span><br><span class="line">db.users.update(query, update, options)</span><br><span class="line"></span><br><span class="line">update users <span class="built_in">set</span> age = 24 <span class="built_in">where</span> email = <span class="string">"499871809@qq.com"</span></span><br></pre></td></tr></table></figure>
+<h4 id="save"><a href="#save" class="headerlink" title="save"></a>save</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">user = await db.users.findOne(query).<span class="built_in">exec</span>()</span><br><span class="line">user.age = 18</span><br><span class="line">user.save()</span><br></pre></td></tr></table></figure>
+<h4 id="更新特定字段-set"><a href="#更新特定字段-set" class="headerlink" title="更新特定字段($set)"></a>更新特定字段($set)</h4><p>对于更新对象的某个属性时特别有用</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">update users <span class="built_in">set</span> age = 24 <span class="built_in">where</span> email = 499871809@qq.com</span><br><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; <span class="variable">$set</span>: &#123; age: 24 &#125; &#125;</span><br><span class="line">options = &#123; update: <span class="literal">true</span> &#125;</span><br><span class="line">db.users.update(query, update, options)</span><br><span class="line"></span><br><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; <span class="variable">$set</span>: &#123; ip.address: <span class="string">'aaaaaa'</span> &#125; &#125;</span><br><span class="line">options = &#123; update: <span class="literal">true</span> &#125;</span><br><span class="line">db.users.update(query, update, options)</span><br></pre></td></tr></table></figure>
+<h4 id="删除特定字段-unset"><a href="#删除特定字段-unset" class="headerlink" title="删除特定字段($unset)"></a>删除特定字段($unset)</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">update users <span class="built_in">set</span> age = 24 <span class="built_in">where</span> email = 499871809@qq.com</span><br><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; <span class="variable">$unset</span>: &#123; age: 1 &#125; &#125;</span><br><span class="line">db.users.update(query, update)</span><br></pre></td></tr></table></figure>
+<h4 id="自增-inc"><a href="#自增-inc" class="headerlink" title="自增($inc)"></a>自增($inc)</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="variable">$inc</span>: 1&#125; 加一</span><br><span class="line">&#123;<span class="variable">$inc</span>: -1&#125; 减一</span><br><span class="line"></span><br><span class="line">update users <span class="built_in">set</span> age = age+1 <span class="built_in">where</span> email = 499871809@qq.com</span><br><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; <span class="variable">$inc</span>: &#123; age: 1 &#125; &#125;</span><br><span class="line">db.users.update(query, update)</span><br></pre></td></tr></table></figure>
+<h4 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h4><h5 id="一次追加多个元素-pushAll"><a href="#一次追加多个元素-pushAll" class="headerlink" title="一次追加多个元素($pushAll)"></a>一次追加多个元素($pushAll)</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; <span class="variable">$pushAll</span>: &#123; score: [0, 9, 0] &#125; &#125;</span><br><span class="line">db.users.update(query, update)</span><br></pre></td></tr></table></figure>
+<h5 id="追加不重复元素-addToSet"><a href="#追加不重复元素-addToSet" class="headerlink" title="追加不重复元素($addToSet)"></a>追加不重复元素($addToSet)</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; <span class="variable">$addToSet</span>: &#123; score: [1] &#125; &#125;</span><br><span class="line">db.users.update(query, update)</span><br></pre></td></tr></table></figure>
+<h5 id="删除元素-pop"><a href="#删除元素-pop" class="headerlink" title="删除元素($pop)"></a>删除元素($pop)</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; <span class="variable">$addToSet</span>: &#123; score: 1 &#125; &#125; //删除最后一个元素</span><br><span class="line">update = &#123; <span class="variable">$addToSet</span>: &#123; score: -1 &#125; &#125; //删除第一个元素</span><br><span class="line">db.users.update(query, update)</span><br></pre></td></tr></table></figure>
+<p>#####删除多个特定元素($popAll)<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">query = &#123; <span class="string">"email"</span>: <span class="string">"499871809@qq.com"</span> &#125;</span><br><span class="line">update = &#123; <span class="variable">$pullAll</span>: &#123; score: [0, 9] &#125; &#125;</span><br><span class="line">db.users.update(query, update)</span><br></pre></td></tr></table></figure></p>
+<h3 id="五、-其他"><a href="#五、-其他" class="headerlink" title="五、 其他"></a>五、 其他</h3><p>####数组查询</p>
+<p>只要匹配其中一个就可以</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">languages: [<span class="string">'javasctipt'</span>, <span class="string">'c++'</span>]</span><br><span class="line">db.users.find(&#123; languages: <span class="string">'javasctipt'</span> &#125;) 可以匹配到</span><br></pre></td></tr></table></figure>
+<p>多个条件都符合($all)</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123; languages: <span class="variable">$all</span>: [<span class="string">'javasctipt'</span>, <span class="string">'c++'</span>] &#125;) 可以匹配到</span><br></pre></td></tr></table></figure>
+<p>限制长度($size)</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123; languages: <span class="variable">$size</span>: 2&#125;) 可以匹配到</span><br></pre></td></tr></table></figure>
+<p>返回特定偏移量($slice)<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.users.find(&#123; languages: <span class="variable">$slice</span>: 1 &#125;) //第一个</span><br><span class="line">db.users.find(&#123; languages: <span class="variable">$slice</span>: -1 &#125;) //倒数第一个</span><br><span class="line">db.users.find(&#123; languages: <span class="variable">$slice</span>: [1, 1] &#125;) //index为1开始，返回一个</span><br></pre></td></tr></table></figure></p>
+<p>元素匹配($elemMatch) 常用于对象数组<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">friends = [&#123; name: <span class="string">'xiaoming'</span>, age: 22 &#125;, &#123; name: <span class="string">'xiaoyu'</span>, age: 23 &#125;]</span><br><span class="line">db.users.find(&#123; friends: <span class="variable">$elemMatch</span>: &#123; age: &#123; <span class="variable">$gt</span>: 22 &#125; &#125; &#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="取模-mod"><a href="#取模-mod" class="headerlink" title="取模($mod)"></a>取模($mod)</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">read</span> % 2 == 1 奇数</span><br><span class="line">db.users.find(&#123; age: &#123; mod: [2, 1] &#125; &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="取反"><a href="#取反" class="headerlink" title="取反"></a>取反</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$not</span>是元语句，即可以用在任何其他条件之上, 可以是正则或对象</span><br><span class="line">db.users.find(&#123; age: &#123; <span class="variable">$not</span>: &#123; <span class="variable">$gt</span>: 22&#125; &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="存在-exists"><a href="#存在-exists" class="headerlink" title="存在($exists)"></a>存在($exists)</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">query = &#123; age: &#123; <span class="variable">$exists</span>: <span class="literal">true</span> &#125; &#125; 存在</span><br><span class="line">query = &#123; age: &#123; <span class="variable">$exists</span>: <span class="literal">false</span> &#125; &#125; 不存在</span><br><span class="line">db.users.find(query)</span><br></pre></td></tr></table></figure>
+<h4 id="正则表达式-regex"><a href="#正则表达式-regex" class="headerlink" title="正则表达式($regex)"></a>正则表达式($regex)</h4><p>You cannot use $regex operator expressions inside an $in.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; name: &#123; <span class="variable">$regex</span>: /acme.*corp/i, <span class="variable">$nin</span>: [ <span class="string">'acmeblahcorp'</span> ] &#125; &#125;</span><br><span class="line">&#123; name: &#123; <span class="variable">$regex</span>: /acme.*corp/, <span class="variable">$options</span>: <span class="string">'i'</span>, <span class="variable">$nin</span>: [ <span class="string">'acmeblahcorp'</span> ] &#125; &#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+          
+            <a href="/tags/后端/" rel="tag"># 后端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/20/frontend/urlparse/" rel="next" title="浏览器与URL的那点事">
+                <i class="fa fa-chevron-left"></i> 浏览器与URL的那点事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/25/node/OAuth/" rel="prev" title="OAuth 2.0">
+                OAuth 2.0 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/setting/avatar.jpg"
+                alt="侬你个啥" />
+            
+              <p class="site-author-name" itemprop="name">侬你个啥</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#官方文档"><span class="nav-text">官方文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、-新增-insert"><span class="nav-text">一、 新增(insert)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、-查询-find"><span class="nav-text">二、 查询(find)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询所有"><span class="nav-text">查询所有</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件查询（where）"><span class="nav-text">条件查询（where）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指定键值（where）"><span class="nav-text">指定键值（where）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#并（and）"><span class="nav-text">并（and）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#或（or）"><span class="nav-text">或（or）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#符号对比"><span class="nav-text">符号对比</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模糊查询-like"><span class="nav-text">模糊查询(like)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数目-count"><span class="nav-text">数目(count)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序-sort-order-by"><span class="nav-text">排序(sort, order by)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、-删除-remove"><span class="nav-text">三、 删除(remove)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、-更新-update"><span class="nav-text">四、 更新(update)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#update"><span class="nav-text">update</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#save"><span class="nav-text">save</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新特定字段-set"><span class="nav-text">更新特定字段($set)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除特定字段-unset"><span class="nav-text">删除特定字段($unset)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自增-inc"><span class="nav-text">自增($inc)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组操作"><span class="nav-text">数组操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一次追加多个元素-pushAll"><span class="nav-text">一次追加多个元素($pushAll)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#追加不重复元素-addToSet"><span class="nav-text">追加不重复元素($addToSet)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除元素-pop"><span class="nav-text">删除元素($pop)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、-其他"><span class="nav-text">五、 其他</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#取模-mod"><span class="nav-text">取模($mod)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取反"><span class="nav-text">取反</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#存在-exists"><span class="nav-text">存在($exists)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则表达式-regex"><span class="nav-text">正则表达式($regex)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">侬你个啥</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
